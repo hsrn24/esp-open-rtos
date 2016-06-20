@@ -167,6 +167,13 @@ SECTIONS
     __XT_EXCEPTION_DESCS_END__ = ABSOLUTE(.);
     *(.xt_except_desc_end)
 
+    *(.flash.rodata.* .flash.rodata)
+    *(.rodata.str*)
+    *(.rodata.RT*)
+    *(.rodata.FT*)
+    *(.rodata.RS*)
+    *(.rodata.FS*)
+
   } >irom0_0_seg :irom0_0_phdr
 
   .data : ALIGN(4)

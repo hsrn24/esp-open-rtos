@@ -32,6 +32,9 @@
 #ifndef __LWIPOPTS_H__
 #define __LWIPOPTS_H__
 
+#define LWIP_POSIX_SOCKETS_IO_NAMES     0
+#define LWIP_COMPAT_SOCKETS             0
+
 #define LWIP_ESP                            1
 #define ESP_RTOS                            1
 #define PBUF_RSV_FOR_WLAN                   1
@@ -219,6 +222,7 @@
  *         for the event. This is the default.
 */
 #define TCP_MSS                         1460
+#define TCP_WND                         (2 * TCP_MSS)
 
 /**
  * TCP_MAXRTX: Maximum number of retransmissions of data segments.
@@ -389,12 +393,12 @@
 */
 
 // Uncomment this line, and set the individual debug options you want, for IP stack debug output
-//#define LWIP_DEBUG
+// #define LWIP_DEBUG
 
 /**
  * ETHARP_DEBUG: Enable debugging in etharp.c.
  */
-#define ETHARP_DEBUG                    LWIP_DBG_OFF
+#define ETHARP_DEBUG                    LWIP_DBG_ON
 
 /**
  * PBUF_DEBUG: Enable debugging in pbuf.c.
@@ -404,52 +408,52 @@
 /**
  * API_LIB_DEBUG: Enable debugging in api_lib.c.
  */
-#define API_LIB_DEBUG                   LWIP_DBG_OFF
+#define API_LIB_DEBUG                   LWIP_DBG_ON
 
 /**
  * SOCKETS_DEBUG: Enable debugging in sockets.c.
  */
-#define SOCKETS_DEBUG                   LWIP_DBG_OFF
+#define SOCKETS_DEBUG                   LWIP_DBG_ON
 
 /**
  * IP_DEBUG: Enable debugging for IP.
  */
-#define IP_DEBUG                        LWIP_DBG_OFF
+#define IP_DEBUG                        LWIP_DBG_ON
 
 /**
  * MEMP_DEBUG: Enable debugging in memp.c.
  */
-#define MEMP_DEBUG                      LWIP_DBG_OFF
+#define MEMP_DEBUG                      LWIP_DBG_ON
 
 /**
  * TCP_INPUT_DEBUG: Enable debugging in tcp_in.c for incoming debug.
  */
-#define TCP_INPUT_DEBUG                 LWIP_DBG_OFF
+#define TCP_INPUT_DEBUG                 LWIP_DBG_ON
 
 /**
  * TCP_OUTPUT_DEBUG: Enable debugging in tcp_out.c output functions.
  */
-#define TCP_OUTPUT_DEBUG                LWIP_DBG_OFF
+#define TCP_OUTPUT_DEBUG                LWIP_DBG_ON
 
 /**
  * UDP_DEBUG: Enable debugging in udp.c.
  */
-#define UDP_DEBUG                     LWIP_DBG_OFF
+#define UDP_DEBUG                     LWIP_DBG_ON
 
 /**
  * ICMP_DEBUG: Enable debugging in udp.c.
  */
-#define ICMP_DEBUG                     LWIP_DBG_OFF
+#define ICMP_DEBUG                     LWIP_DBG_ON
 
 /**
  * TCPIP_DEBUG: Enable debugging in tcpip.c.
  */
-#define TCPIP_DEBUG                     LWIP_DBG_OFF
+#define TCPIP_DEBUG                     LWIP_DBG_ON
 
 
 /**
  * DHCP_DEBUG: Enable debugging in dhcp.c.
  */
-#define DHCP_DEBUG                      LWIP_DBG_OFF
+#define DHCP_DEBUG                      LWIP_DBG_ON
 
 #endif /* __LWIPOPTS_H__ */

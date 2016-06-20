@@ -134,5 +134,7 @@ to exclude the API function. */
 #define INCLUDE_uxTaskGetStackHighWaterMark 1
 #endif
 
+#define configUSE_RECURSIVE_MUTEXES     1
+
 #endif /* __DEFAULT_FREERTOS_CONFIG_H */
 

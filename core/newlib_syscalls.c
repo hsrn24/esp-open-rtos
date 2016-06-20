@@ -40,6 +40,8 @@ IRAM caddr_t _sbrk_r (struct _reent *r, int incr)
     return (caddr_t) prev_heap_end;
 }
 
+extern void stdio_putc(char c);
+
 /* syscall implementation for stdio write to UART */
 long _write_r(struct _reent *r, int fd, const char *ptr, int len )
 {
@@ -48,12 +50,12 @@ long _write_r(struct _reent *r, int fd, const char *ptr, int len )
         return -1;
     }
     for(int i = 0; i < len; i++) {
-        /* Auto convert CR to CRLF, ignore other LFs (compatible with Espressif SDK behaviour) */
-        if(ptr[i] == '\r')
-            continue;
-        if(ptr[i] == '\n')
-            uart_putc(0, '\r');
-        uart_putc(0, ptr[i]);
+        // /* Auto convert CR to CRLF, ignore other LFs (compatible with Espressif SDK behaviour) */
+        // if(ptr[i] == '\r')
+            // continue;
+        // if(ptr[i] == '\n')
+            // stdio_putc('\r');
+        stdio_putc(ptr[i]);
     }
     return len;
 }
