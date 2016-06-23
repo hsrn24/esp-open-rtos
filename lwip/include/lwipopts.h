@@ -408,12 +408,12 @@
 /**
  * API_LIB_DEBUG: Enable debugging in api_lib.c.
  */
-#define API_LIB_DEBUG                   LWIP_DBG_ON
+#define API_LIB_DEBUG                   LWIP_DBG_OFF
 
 /**
  * SOCKETS_DEBUG: Enable debugging in sockets.c.
  */
-#define SOCKETS_DEBUG                   LWIP_DBG_ON
+#define SOCKETS_DEBUG                   LWIP_DBG_OFF
 
 /**
  * IP_DEBUG: Enable debugging for IP.
@@ -423,37 +423,37 @@
 /**
  * MEMP_DEBUG: Enable debugging in memp.c.
  */
-#define MEMP_DEBUG                      LWIP_DBG_ON
+#define MEMP_DEBUG                      LWIP_DBG_OFF
 
 /**
  * TCP_INPUT_DEBUG: Enable debugging in tcp_in.c for incoming debug.
  */
-#define TCP_INPUT_DEBUG                 LWIP_DBG_ON
+#define TCP_INPUT_DEBUG                 LWIP_DBG_OFF
 
 /**
  * TCP_OUTPUT_DEBUG: Enable debugging in tcp_out.c output functions.
  */
-#define TCP_OUTPUT_DEBUG                LWIP_DBG_ON
+#define TCP_OUTPUT_DEBUG                LWIP_DBG_OFF
 
 /**
  * UDP_DEBUG: Enable debugging in udp.c.
  */
-#define UDP_DEBUG                     LWIP_DBG_ON
+#define UDP_DEBUG                     LWIP_DBG_OFF
 
 /**
  * ICMP_DEBUG: Enable debugging in udp.c.
  */
-#define ICMP_DEBUG                     LWIP_DBG_ON
+#define ICMP_DEBUG                     LWIP_DBG_OFF
 
 /**
  * TCPIP_DEBUG: Enable debugging in tcpip.c.
  */
-#define TCPIP_DEBUG                     LWIP_DBG_ON
+#define TCPIP_DEBUG                     LWIP_DBG_OFF
 
 
 /**
  * DHCP_DEBUG: Enable debugging in dhcp.c.
  */
-#define DHCP_DEBUG                      LWIP_DBG_ON
+#define DHCP_DEBUG                      LWIP_DBG_OFF
 
 #endif /* __LWIPOPTS_H__ */

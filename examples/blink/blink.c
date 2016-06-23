@@ -10,6 +10,12 @@
 
 const int gpio = 2;
 
+
+void stdio_putc(char c)
+{
+
+}
+
 /* This task uses the high level GPIO API (esp_gpio.h) to blink an LED.
  *
  */
