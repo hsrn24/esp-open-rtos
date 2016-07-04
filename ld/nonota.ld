@@ -11,5 +11,5 @@ MEMORY
 
   - Length is max 8Mbit of mappable flash, minus start offset
 */
-  irom0_0_seg :                       	org = 0x40220000, len = (1M - 0x20000)
+  irom0_0_seg :                       	org = 0x40220000, len = (1M - 0x20000 - 4 * 4096)
 }
