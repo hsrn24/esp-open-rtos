@@ -129,7 +129,7 @@
  * that this option does not affect incoming packet sizes, which can be
  * controlled via IP_REASSEMBLY.
  */
-#define IP_FRAG                         1
+#define IP_FRAG                         0
 
 /**
  * IP_REASS_MAXAGE: Maximum time (in multiples of IP_TMR_INTERVAL - so seconds, normally)
@@ -234,6 +234,7 @@
  * TCP_SYNMAXRTX: Maximum number of retransmissions of SYN segments.
  */
 #define TCP_SYNMAXRTX                   3
+#define LWIP_TCP 0
 
 /*
    ----------------------------------
@@ -349,7 +350,9 @@
 /**
  * LWIP_SO_RCVBUF==1: Enable SO_RCVBUF processing.
  */
-#define LWIP_SO_RCVBUF                  0
+#define INT_MAX 0xFFFFFFFF
+#define RECV_BUFSIZE_DEFAULT            10000
+#define LWIP_SO_RCVBUF                  1
 
 /**
  * SO_REUSE==1: Enable SO_REUSEADDR option.
@@ -398,7 +401,7 @@
 /**
  * ETHARP_DEBUG: Enable debugging in etharp.c.
  */
-#define ETHARP_DEBUG                    LWIP_DBG_ON
+#define ETHARP_DEBUG                    LWIP_DBG_OFF
 
 /**
  * PBUF_DEBUG: Enable debugging in pbuf.c.
@@ -438,7 +441,7 @@
 /**
  * UDP_DEBUG: Enable debugging in udp.c.
  */
-#define UDP_DEBUG                     LWIP_DBG_OFF
+#define UDP_DEBUG                     LWIP_DBG_ON
 
 /**
  * ICMP_DEBUG: Enable debugging in udp.c.
